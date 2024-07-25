@@ -6,6 +6,8 @@ import be.vdab.goededoel.GoedeDoel;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.math.BigDecimal;
+
 class GoedeDoelTest {
 	private static final String NAAM = "CliniClowns";
 	private GoedeDoel doel;
@@ -33,5 +35,10 @@ class GoedeDoelTest {
 	@Test
 	void doelenMetVerschillendeNaamZijnVerschillend() {
 		assertThat(doel).isNotEqualTo(new GoedeDoel("WWF"));
+	}
+
+	@Test
+	void doelVrschiltVanEenObjectVanEenAnderType() {
+		assertThat(doel).isNotEqualTo(BigDecimal.ZERO);
 	}
 }
