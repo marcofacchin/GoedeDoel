@@ -17,7 +17,7 @@ class GoedeDoelTest {
 
 	@Test
 	void getNaam() {
-		assertThat(doel.getNaam()).isEqualTo(NAAM);
+		assertThat(doel.getNaam()).isEqualTo("bla");
 	}
 
 	@Test
